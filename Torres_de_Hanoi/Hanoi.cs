@@ -8,7 +8,7 @@ namespace Torres_de_Hanoi
 {
     class Hanoi
     {
-        public int m = 0;
+        public int movimientos = 0;
         /*TODO: Implementar métodos*/
         public void mover_disco(Pila a, Pila b)
         {
@@ -45,7 +45,7 @@ namespace Torres_de_Hanoi
                 mover_disco(ini, fin);
                 mover_disco(aux, fin);
             }
-            return m;
+            return movimientos;
         }
 
     }
