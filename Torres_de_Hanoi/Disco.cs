@@ -11,6 +11,15 @@ namespace Torres_de_Hanoi
         
         //Tipo de valor:
         public int Valor { get; set; }
+
+
+
+
+
+        public Disco(int tam)
+        {
+            Valor = tam;
+        }
         
         
     }

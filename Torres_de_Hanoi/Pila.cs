@@ -26,20 +26,33 @@ namespace Torres_de_Hanoi
             Top = 0;
             Elementos = new List<Disco>();
         }
+        
+ 
 
         public void push(Disco d)
         {
             Elementos.Add(d);
-            Size++;
+            Size=Elementos.Count();
             Top = d.Valor;
         }
 
         public Disco pop()
         {
-            Disco quitado= Elementos.ElementAt(Top);
-            Elementos.RemoveAt(Top);
-            Size--;
+             Disco quitado= Elementos.Last();
+             Elementos.RemoveAt(Elementos.Count-1);
+             Size=Elementos.Count;
+             
+            if (Elementos.Count == 0)
+            {
+                Top = 0;
+            }
+            else
+            {
+                Top = Elementos.Last().Valor;
+            }
             return quitado;
+            
+           
         }                
 
         public bool isEmpty()
